@@ -58,6 +58,9 @@ Load model
 from NovaSR import FastSR
 
 upsampler = FastSR() ## downloads from hf
+
+## Use this instead for CPUs as it leads to 3-4x speedup.
+# upsampler = FastSR(half=False)
 ```
 
 Run model
