@@ -8,6 +8,10 @@
   <a href="https://huggingface.co/spaces/YatharthS/NovaSR">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Space-blue" alt="Hugging Face Space">
   </a>
+  &nbsp;
+  <a href="https://www.kaggle.com/code/yatharthsharma888/novasr-training">
+    <img src="https://img.shields.io/badge/Kaggle-Training%20Notebook-20BEFF?logo=kaggle&logoColor=white" alt="Kaggle Notebook">
+  </a>
 </p>
 
 
@@ -75,7 +79,9 @@ highres_audio = upsampler.infer(lowres_audio).cpu()
 
 display(Audio(highres_audio, rate=48000))
 ```
+### Training
 
+Please check out the kaggle notebook for training the model further on custom datasets: https://www.kaggle.com/code/yatharthsharma888/novasr-training
 ### Info
 
 Q: How much data was this trained on?
