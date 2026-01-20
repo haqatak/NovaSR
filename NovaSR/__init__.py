@@ -7,7 +7,13 @@ from torch.nn.utils import weight_norm
 class FastSR:
     def __init__(self, ckpt_path=None, half=True):
         
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        if torch.cuda.is_available():
+            self.device = torch.device('cuda')
+        elif torch.backends.mps.is_available():
+            self.device = torch.device('mps')
+        else:
+            self.device = torch.device('cpu')
+
         self.hps = {
             "train": {
                 "segment_size": 9600
